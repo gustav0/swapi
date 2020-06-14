@@ -15,14 +15,14 @@ class SimpleNameModel(models.Model):
 class Planet(TimeStampedModel, SimpleNameModel):
     """ Planetas del universo de Star Wars """
 
-    rotation_period = models.CharField(max_length=40)
-    orbital_period = models.CharField(max_length=40)
-    diameter = models.CharField(max_length=40)
-    climate = models.CharField(max_length=40)
-    gravity = models.CharField(max_length=40)
-    terrain = models.CharField(max_length=40)
-    surface_water = models.CharField(max_length=40)
-    population = models.CharField(max_length=40)
+    rotation_period = models.CharField(max_length=40, blank=True)
+    orbital_period = models.CharField(max_length=40, blank=True)
+    diameter = models.CharField(max_length=40, blank=True)
+    climate = models.CharField(max_length=40, blank=True)
+    gravity = models.CharField(max_length=40, blank=True)
+    terrain = models.CharField(max_length=40, blank=True)
+    surface_water = models.CharField(max_length=40, blank=True)
+    population = models.CharField(max_length=40, blank=True)
 
     class Meta:
         db_table = 'planet'
